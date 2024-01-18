@@ -8,6 +8,7 @@
 body {
     background-size: cover;
     background-image: url("v3.jpg");
+
 }
 
 main{
@@ -16,6 +17,8 @@ main{
     margin-right: 50px;
     margin-bottom: 50px;
     color: #456280;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #456280;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
@@ -42,16 +45,16 @@ aside{
     grid-area: b;
 }
 
-.headerDivje{
+header{
     background-color: #506a85;
-    width: 200px;
+    height: 50px;
     padding: 30px;
     background-size: cover;
 }
 
 nav ul{
     list-style-type: none;
-    margin: 0px;
+    margin: 20px;
     padding: 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -65,15 +68,13 @@ li a{
 
 article{
     text-align: center;
+    padding: 10px;
 }
 
-table{
-
-}
 
 img{
-    border: 3px solid #456280;
-    margin: 10px
+    border: 5px solid #456280;
+    max-width: 100%;
 }
 
 footer{
@@ -85,11 +86,27 @@ footer{
 footer p{
     color: #dad5ca;
     text-align: center;
+    
  }
 
+ .kepek{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+ }
 
- @media only screen and (max-width: 500px) {
+ aside{
+    padding:10px;
+ }
+
+    @media only screen and (max-width: 700px) {
+    body{
+        background-size: cover;
+        width: 100%;
+    }
+    
     main {
+        grid-template-columns: 1fr;
         grid-template-areas: 
         "h"
         "n"
@@ -98,3 +115,4 @@ footer p{
         "f"
     }
   }
+
